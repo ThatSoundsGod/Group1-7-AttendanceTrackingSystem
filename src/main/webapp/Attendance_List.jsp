@@ -59,6 +59,7 @@
 					<li><a href="/Main_Page.jsp">Home</a></li>
 					<li class="active"><a href="/Attendance_List.jsp">Attendance List</a></li>
 					<li><a href="/User_Info.jsp">User Info</a></li>
+					<li><a href="/Attendance_Log.jsp">Attendance Log</a></li>
 				</ul>
 				<!--right align -->
 				<ul class="nav navbar-nav navbar-right">
