@@ -19,6 +19,8 @@ public class Attandance {
 	public boolean attandance_attended;
 	public boolean attendance_presented;
 	
+	//test
+	
 	public Attandance() {
 	}
 	
