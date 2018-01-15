@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Tutorium">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Student" type="studentType"
+					maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="studentType">
+		<xs:sequence>
+			<xs:element name="id" type="xs:long" />
+			<xs:element name="firstname" type="xs:string" />
+			<xs:element name="lastname" type="xs:string" />
+			<xs:element name="student_id" type="xs:string" />
+			<xs:element name="email" type="xs:string" />
+			<xs:element name="password" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

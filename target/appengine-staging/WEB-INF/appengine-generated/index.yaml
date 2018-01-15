@@ -1,0 +1,7 @@
+indexes:
+- kind: "Attandance"
+  properties:
+  - name: "attandance_student_id"
+    direction: asc
+  - name: "attandance_date"
+    direction: asc
