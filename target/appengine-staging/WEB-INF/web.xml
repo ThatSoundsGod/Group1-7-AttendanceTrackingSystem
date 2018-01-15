@@ -64,28 +64,8 @@
     </servlet>
 
     <servlet>
-        <servlet-name>org.apache.jsp.BLALBVALL_jsp</servlet-name>
-        <servlet-class>org.apache.jsp.BLALBVALL_jsp</servlet-class>
-    </servlet>
-
-    <servlet>
-        <servlet-name>org.apache.jsp.Login_005fPage_jsp</servlet-name>
-        <servlet-class>org.apache.jsp.Login_005fPage_jsp</servlet-class>
-    </servlet>
-
-    <servlet>
         <servlet-name>org.apache.jsp.Main_005fPage_jsp</servlet-name>
         <servlet-class>org.apache.jsp.Main_005fPage_jsp</servlet-class>
-    </servlet>
-
-    <servlet>
-        <servlet-name>org.apache.jsp.Registration_jsp</servlet-name>
-        <servlet-class>org.apache.jsp.Registration_jsp</servlet-class>
-    </servlet>
-
-    <servlet>
-        <servlet-name>org.apache.jsp.Tutorial_005fPage_jsp</servlet-name>
-        <servlet-class>org.apache.jsp.Tutorial_005fPage_jsp</servlet-class>
     </servlet>
 
     <servlet>
@@ -104,28 +84,8 @@
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>org.apache.jsp.BLALBVALL_jsp</servlet-name>
-        <url-pattern>/BLALBVALL.jsp</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>org.apache.jsp.Login_005fPage_jsp</servlet-name>
-        <url-pattern>/Login_Page.jsp</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
         <servlet-name>org.apache.jsp.Main_005fPage_jsp</servlet-name>
         <url-pattern>/Main_Page.jsp</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>org.apache.jsp.Registration_jsp</servlet-name>
-        <url-pattern>/Registration.jsp</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>org.apache.jsp.Tutorial_005fPage_jsp</servlet-name>
-        <url-pattern>/Tutorial_Page.jsp</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
