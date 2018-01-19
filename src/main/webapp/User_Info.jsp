@@ -48,16 +48,17 @@
 
 			<!-- Logo -->
 			<div class="navbar-header">
-				<a href="/Main_Page.jsp" class="navbar-brand">Attendant Tracking System</a>
+				<a href="/Main_Page.jsp" class="navbar-brand">Attendance Tracking System</a>
 			</div>
 
 			<!-- Menu Items -->
 			<div>
 				<ul class="nav navbar-nav">
 					<li><a href="/Main_Page.jsp">Home</a></li>
-					<li><a href="/Attendance_List.jsp">Attendance List</a></li>
+					<li><a href="/Attendance_List.jsp">Personal Attendance Record</a></li>
+					<li><a href="/Attendance_List_all.jsp">Overall Attendance Records</a></li>
 					<li class="active"><a href="/User_Info.jsp">User Info</a></li>
-					<li><a href="/Attendance_Log.jsp">Attendance Log</a></li>
+					<!-- <li><a href="/Attendance_Log.jsp">Attendance Log</a></li>  -->
 				</ul>
 				<!--right align -->
 				<ul class="nav navbar-nav navbar-right">

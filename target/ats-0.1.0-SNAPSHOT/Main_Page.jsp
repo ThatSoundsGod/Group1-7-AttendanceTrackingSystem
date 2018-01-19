@@ -49,16 +49,17 @@
 
 			<!-- Logo -->
 			<div class="navbar-header">
-				<a href="/Main_Page.jsp" class="navbar-brand">Attendant Tracking System</a>
+				<a href="/Main_Page.jsp" class="navbar-brand">Attendance Tracking System</a>
 			</div>
 
 			<!-- Menu Items -->
 			<div>
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="/Main_Page.jsp">Home</a></li>
-					<li><a href="/Attendance_List.jsp">Attendance List</a></li>
+					<li><a href="/Attendance_List.jsp">Personal Attendance Record</a></li>
+					<li><a href="/Attendance_List_all.jsp">Overall Attendance Records</a></li>
 					<li><a href="/User_Info.jsp">User Info</a></li>
-					<li><a href="/Attendance_Log.jsp">Attendance Log</a></li>
+				<!-- 	<li><a href="/Attendance_Log.jsp">Attendance Log</a></li>  -->
 				</ul>
 				<!--right align -->
 				<ul class="nav navbar-nav navbar-right">
@@ -138,11 +139,19 @@
 										</tr>
 									</tbody>
 								</table>
+								
+								<%
+								Date datetoday = new Date();
+								if (tutorial.tutorial_startdate.compareTo(datetoday) > 0){ 
+								%>
 								<form action="/JoinTutorialServlet">
-								  <input type="hidden" name="tutorialid" value="${fn:escapeXml(tutorialid)}">
-								  <button type="submit" class="btn btn-primary" value="Submit">Leave Group</button>
+								  	<input type="hidden" name="tutorialid" value="${fn:escapeXml(tutorialid)}">
+								  	<button type="submit" class="btn btn-primary" value="Submit">Leave Group</button>
 								</form>
-
+								<%} else {%>
+									<button class="btn btn-primary" disabled>Leave Group</button>
+								<%}%>
+								
 							</div>
 							<%
 							}	

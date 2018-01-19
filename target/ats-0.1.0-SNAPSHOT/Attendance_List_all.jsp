@@ -1,0 +1,202 @@
+<%-- //[START all]--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ page import="com.google.appengine.api.users.User"%>
+<%@ page import="com.google.appengine.api.users.UserService"%>
+<%@ page import="com.google.appengine.api.users.UserServiceFactory"%>
+
+<%-- //[START imports]--%>
+<%@ page import="com.ase2017.ats.Tutorial"%>
+<%@ page import="com.ase2017.ats.Student"%>
+<%@ page import="com.ase2017.ats.Attandance"%>
+<%@ page import="com.googlecode.objectify.Key"%>
+<%@ page import="com.googlecode.objectify.ObjectifyService"%>
+<%-- //[END imports]--%>
+
+<%@ page import="java.util.List"%>
+<%@ page import="java.util.Date"%>
+<%@ page import="java.text.DateFormat"%>
+<%@ page import="java.text.SimpleDateFormat"%>
+
+
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type"
+	content="application/xhtml+xml; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+<title>Attendance Tracking System</title>
+<link rel="shortcut icon" type="image/x-icon; charset=binary"
+	href="TUM_Web_Logo_blau.ico" />
+</head>
+
+<body>
+
+	<%
+		UserService userService = UserServiceFactory.getUserService();
+		User user = userService.getCurrentUser();
+		DateFormat dateoutputformat = new SimpleDateFormat("dd. MMM yyyy");
+	%>
+	<!-- Navbar -->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+
+			<!-- Logo -->
+			<div class="navbar-header">
+				<a href="/Main_Page.jsp" class="navbar-brand">Attendance Tracking System</a>
+			</div>
+
+			<!-- Menu Items -->
+			<div>
+				<ul class="nav navbar-nav">
+					<li><a href="/Main_Page.jsp">Home</a></li>
+					<li><a href="/Attendance_List.jsp">Personal Attendance Record</a></li>
+					<li class="active"><a href="/Attendance_List_all.jsp">Overall Attendance Records</a></li>
+					<li><a href="/User_Info.jsp">User Info</a></li>
+				<!-- 	<li><a href="/Attendance_Log.jsp">Attendance Log</a></li>  -->
+				</ul>
+				<!--right align -->
+				<ul class="nav navbar-nav navbar-right">
+					<%
+						if (user != null) {
+					%>
+					<li><a
+						href="<%=userService.createLogoutURL(request.getRequestURI())%>">Logout</a></li>
+					<%
+						} else {
+					%>
+					<li><a
+						href="<%=userService.createLoginURL(request.getRequestURI())%>">Login</a></li>
+					<%
+						}
+					%>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+
+	<!-- Main Stuff on Page -->
+	<div class="container-fluid">
+
+		<h1>Attendance Tracking System</h1>
+		<%
+			if (user != null) {
+				
+				List<Attandance> attandances = ObjectifyService.ofy()
+						.load()
+						.type(Attandance.class)
+						//.filter("attandance_student_id", user.getUserId())
+						.order("attandance_date")
+						.list();
+						
+				if (attandances.isEmpty()) {
+				%>
+				<!-- no Attendance Records -->
+				<h3>There are no Attendance Records!</h3>
+				<%
+				
+				} else {
+				%>
+				<!-- Attendances -->
+				
+				<h3>Select an E-mail to list the Attendance Records!</h3>
+				
+				<form action="/Attendance_List_all.jsp" method="post">
+					<div class="form-group row">
+						<div class="col-xs-3">
+					    <select class="form-control form-control-lg" id="SelectEmail" name="id">
+					    	<option disabled selected> -- select an E-mail Address -- </option>
+						    <%
+						    List<Student> students = ObjectifyService.ofy()
+							.load()
+							.type(Student.class)
+							.list();
+						    for (Student student:students){
+						    	pageContext.setAttribute("email",student.student_email);
+						    	pageContext.setAttribute("studentid",student.student_id);
+						    %>
+					      	<option value="${fn:escapeXml(studentid)}">${fn:escapeXml(email)}</option>
+					    	<%}%> 
+					    </select>
+					    </div>
+					
+					<div class="col-xs-2">
+			    		<button type="submit" class="btn btn-primary">List Records</button>
+			    	</div>
+			    	</div>
+				</form>
+				<%if (request.getParameter("id") != null){
+				%>	
+				<h3>Here are the Attendance Records:</h3>
+				
+				<div class="well">
+				<%
+					int i = 1;
+					for(Attandance attandance:attandances){
+						if (attandance.attandance_student_id.equals(request.getParameter("id"))){
+							pageContext.setAttribute("number",i);
+							i += 1;
+							pageContext.setAttribute("date",dateoutputformat.format(attandance.attandance_date));
+					%>
+							<table class="table">
+					            <thead>
+					                <tr>
+					                    <th>Number</th>
+					                    <th>Date</th>
+					                    <th class="text-center">Attended</th>
+					                    <th class="text-center">Presented</th>
+					                </tr>
+					            </thead>
+					            <tbody>
+					                <tr>
+					                    <td>${fn:escapeXml(number)}</td>
+					                    <td>${fn:escapeXml(date)}</td>
+					                    <%if (attandance.attandance_attended){ %>
+					                    	<td class="text-center"><span class= "glyphicon glyphicon-ok" style="font-size:20px;color:green"></span></td>
+					                    <%} else { %>
+					                    	<td class="text-center"><span class= "glyphicon glyphicon-remove" style="font-size:20px;color:red"></span></td>
+					                    <%}%>
+					                    <%if (attandance.attendance_presented){ %>
+					                    	<td class="text-center"><span class= "glyphicon glyphicon-ok" style="font-size:20px;color:green"></span></td>
+					                    <%} else { %>
+					                    	<td class="text-center"><span class= "glyphicon glyphicon-remove" style="font-size:20px;color:red"></span></td>
+					                    <%}%>
+									</tr>
+								</tbody>
+							</table>
+						<%}%>
+					<%}%>
+				</div>
+				<%}%>	
+				<%}%>
+	</div>
+		<%
+			} else {
+		%>
+	<div class="container-fluid">
+		<h2>Please Login to see the Attendance Records</h2>
+		<%
+			}
+		%>
+		
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+

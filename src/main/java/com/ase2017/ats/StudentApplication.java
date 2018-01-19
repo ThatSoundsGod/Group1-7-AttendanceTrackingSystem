@@ -61,6 +61,7 @@ public class StudentApplication extends Application {
         router.attach("/{studentId}/", SingleStudent);
         router.attach("/AttendanceList/{studentId}/", AttendanceList);
         
+        
 
         return router;
     }

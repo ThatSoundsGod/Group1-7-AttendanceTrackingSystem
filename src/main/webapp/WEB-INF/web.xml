@@ -26,6 +26,15 @@
      </servlet>
      
      <servlet>
+      <servlet-name>RestletServlet2</servlet-name>
+      <servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
+      <init-param>
+              <param-name>org.restlet.application</param-name>
+              <param-value>com.ase2017.ats.AttendanceLogApplication</param-value>
+      </init-param>
+     </servlet>
+     
+     <servlet>
       <servlet-name>RestletServletHelloWorld</servlet-name>
       <servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
       <init-param>
@@ -74,6 +83,11 @@
 	<servlet-mapping>
       <servlet-name>RestletServlet</servlet-name>
       <url-pattern>/StudentXML/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+      <servlet-name>RestletServlet2</servlet-name>
+      <url-pattern>/AttendanceLog/*</url-pattern>
     </servlet-mapping>
     
     <servlet-mapping>
