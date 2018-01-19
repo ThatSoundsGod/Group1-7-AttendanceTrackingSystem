@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.attendancetrackingsystem.EventListActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text=" Termin 3"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="06.11.2017" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Termin 6"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="27.11.2017" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout16">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Termin 13"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="29.01.1018" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout17"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout15">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Termin 12"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="22.01.2018" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout16"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout14">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Termin 11"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="15.01.2018" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout13">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Termin 10"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="08.01.2018" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout12">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Termin 9"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="18.12.2017" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Termin 8"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="11.12.2017" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Termin 7"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="04.12.2017" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Termin 5"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="20.11.2017" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Termin 2"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="30.10.2017" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Termin 1"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="23.10.2017" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <Spinner
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Termin 4"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="13.11.2017" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="attendant" />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
