@@ -114,7 +114,7 @@
 				
 				<form action="/Attendance_List_all.jsp" method="post">
 					<div class="form-group row">
-						<div class="col-xs-3">
+						<div class="col-xs-8">
 					    <select class="form-control form-control-lg" id="SelectEmail" name="id">
 					    	<option disabled selected> -- select an E-mail Address -- </option>
 						    <%
@@ -130,10 +130,9 @@
 					    	<%}%> 
 					    </select>
 					    </div>
-					
-					<div class="col-xs-2">
+					</div>
+					<div class="form-group">
 			    		<button type="submit" class="btn btn-primary">List Records</button>
-			    	</div>
 			    	</div>
 				</form>
 				<%if (request.getParameter("id") != null){
