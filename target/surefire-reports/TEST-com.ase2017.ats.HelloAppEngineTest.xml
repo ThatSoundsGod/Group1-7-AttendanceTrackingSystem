@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.011" errors="0" skipped="0" tests="1" name="com.ase2017.ats.HelloAppEngineTest">
+<testsuite failures="0" time="0.013" errors="0" skipped="0" tests="1" name="com.ase2017.ats.HelloAppEngineTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_80\jre\bin"/>
@@ -63,5 +63,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.011" classname="com.ase2017.ats.HelloAppEngineTest" name="test"/>
+  <testcase time="0.013" classname="com.ase2017.ats.HelloAppEngineTest" name="test"/>
 </testsuite>

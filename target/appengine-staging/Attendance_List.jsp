@@ -33,8 +33,8 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <title>Attendance Tracking System</title>
-<link rel="shortcut icon" type="image/x-icon; charset=binary"
-	href="TUM_Web_Logo_blau.ico" />
+<!-- <link rel="shortcut icon" type="image/x-icon; charset=binary"
+href="TUM_Web_Logo_blau.ico" /> -->
 </head>
 
 <body>
@@ -110,6 +110,7 @@
 				<div class="well">
 				<%
 					int i = 1;
+					int nocontent = 0;
 					for(Attandance attandance:attandances){
 						if (attandance.attandance_student_id.equals(user.getUserId())){
 							pageContext.setAttribute("number",i);
@@ -142,7 +143,9 @@
 									</tr>
 								</tbody>
 							</table>
-						<%}%>
+						<%} else {nocontent++;}%>
+					<%} if (nocontent == attandances.size()){ %>
+					There are no Attendance Records! Please join a Tutorial!
 					<%}%>
 				</div>	
 				<%}%>
