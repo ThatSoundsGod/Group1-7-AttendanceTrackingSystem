@@ -32,8 +32,10 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <title>Attendance Tracking System</title>
+<!-- <link rel="shortcut icon" type="image/x-icon; charset=binary"
+href="TUM_Web_Logo_blau.ico" /> -->
 <link rel="shortcut icon" type="image/x-icon; charset=binary"
-	href="TUM_Web_Logo_blau.ico" />
+href="favicon.ico" />
 </head>
 
 <body>

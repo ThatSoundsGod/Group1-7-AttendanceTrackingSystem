@@ -38,6 +38,8 @@
 <title>Attendance Tracking System</title>
 <!-- <link rel="shortcut icon" type="image/x-icon; charset=binary"
 href="TUM_Web_Logo_blau.ico" /> -->
+<link rel="shortcut icon" type="image/x-icon; charset=binary"
+href="favicon.ico" />
 </head>
 
 <body>
@@ -136,8 +138,10 @@ href="TUM_Web_Logo_blau.ico" /> -->
 			    	</div>
 				</form>
 				<%if (request.getParameter("id") != null){
+					Student student2 = ObjectifyService.ofy().load().type(Student.class).id(request.getParameter("id")).now();
+					pageContext.setAttribute("nickname",student2.student_email);
 				%>	
-				<h3>Here are the Attendance Records:</h3>
+				<h3>Here are the Attendance Records for ${fn:escapeXml(nickname)}:</h3>
 				
 				<div class="well">
 				<%
