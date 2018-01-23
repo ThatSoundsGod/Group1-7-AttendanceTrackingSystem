@@ -35,6 +35,7 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 
+
 <title>Attendance Tracking System</title>
 <!-- <link rel="shortcut icon" type="image/x-icon; charset=binary"
 href="TUM_Web_Logo_blau.ico" />  -->
@@ -107,8 +108,8 @@ href="favicon.ico" /> -->
 	</nav>
 
 	<!-- Main Stuff on Page -->
-	<div class="container-fluid">
-
+	<div class="container-fluid d-print-none">
+	
 		<h1>Attendance Tracking System</h1>
 		<%
 			if (user != null) {
@@ -130,7 +131,7 @@ href="favicon.ico" /> -->
 				%>
 				<!-- Attendances -->
 				
-				<h3>Select an E-mail to list the Attendance Records!</h3>
+				<h4>Select an E-mail to list the Attendance Records</h4>
 				
 				<form action="/Attendance_List_all.jsp" method="post">
 					<div class="form-group row">
@@ -155,6 +156,32 @@ href="favicon.ico" /> -->
 			    		<button type="submit" class="btn btn-primary">List Records</button>
 			    	</div>
 				</form>
+				<h4>Select a Tutorial Number to list the Attendance Records</h4>
+				<form action="/Attendance_List_all.jsp" method="post">
+					<div class="form-group row">
+						<div class="col-xs-8">
+					    <select class="form-control form-control-lg" id="selectgroup" name="groupid">
+					    	<option disabled selected> -- select an Tutorial Number -- </option>
+						    <%
+						    List<Tutorial> tutorials = ObjectifyService.ofy()
+							.load()
+							.type(Tutorial.class)
+							.list();
+						    for (Tutorial tutorial:tutorials){
+						    	pageContext.setAttribute("tutorialnumber",tutorial.tutorial_number);
+						    	pageContext.setAttribute("tutorialid",tutorial.id);
+						    %>
+					      	<option value="${fn:escapeXml(tutorialid)}">Tutorial Number ${fn:escapeXml(tutorialnumber)}</option>
+					    	<%}%> 
+					    </select>
+					    </div>
+					</div>
+					<div class="form-group">
+			    		<button type="submit" class="btn btn-primary">List Records</button>
+			    	</div>
+				</form>
+				</div> 
+				<div class="container-fluid">
 				<%if (request.getParameter("id") != null){
 					Student student2 = ObjectifyService.ofy().load().type(Student.class).id(request.getParameter("id")).now();
 					pageContext.setAttribute("nickname",student2.student_email);
@@ -202,7 +229,67 @@ href="favicon.ico" /> -->
 					There are no Attendance Records for this User!
 					<%}%>
 				</div>
-				<%}%>	
+				<%} else if(request.getParameter("groupid") != null){
+					long tutorialnumber = Long.parseLong(request.getParameter("groupid"));
+					Tutorial tutorial2 = ObjectifyService.ofy().load().type(Tutorial.class).id(tutorialnumber).now();
+					pageContext.setAttribute("groupnumber",tutorial2.tutorial_number);
+				%>	
+				<h3>Here are the Attendance Records for Tutorial ${fn:escapeXml(groupnumber)}:</h3>
+				
+				<div class="well">
+					<table class="table">
+			            <thead>
+			                <tr>
+			                    <th>No</th>
+			                    <th>Date</th>
+			                    <th style="word-break: break-all">Student Email</th>
+			                    <th style="word-break: break-all" class="text-center">Attended</th>
+			                    <th style="word-break: break-all" class="text-center">Presented</th>
+			                </tr>
+			            </thead>
+				
+				<%
+					int i = 1;
+					int nocontent = 0;
+					for(Attandance attandance:attandances){
+						//System.out.println("attandance.attendance_tutorial_id" +attandance.attendance_tutorial_id+ "== tutorialnumber" +tutorialnumber);
+						if (attandance.attendance_tutorial_id == tutorialnumber){
+							pageContext.setAttribute("number",i);
+							i += 1;
+
+							pageContext.setAttribute("date",dateoutputformat.format(attandance.attandance_date));
+
+							Student student3 = ObjectifyService.ofy().load().type(Student.class).id(attandance.attandance_student_id).now();
+
+							pageContext.setAttribute("studentemail",student3.student_email);
+					%>
+							
+					            <tbody>
+					                <tr>
+					                    <td>${fn:escapeXml(number)}</td>
+					                    <td>${fn:escapeXml(date)}</td>
+					                    <td style="word-break: break-all">${fn:escapeXml(studentemail)}</td>
+					                    <%if (attandance.attandance_attended){ %>
+					                    	<td class="text-center"><span class= "glyphicon glyphicon-ok" style="font-size:20px;color:green"></span></td>
+					                    <%} else { %>
+					                    	<td class="text-center"><span class= "glyphicon glyphicon-remove" style="font-size:20px;color:red"></span></td>
+					                    <%}%>
+					                    <%if (attandance.attendance_presented){ %>
+					                    	<td class="text-center"><span class= "glyphicon glyphicon-ok" style="font-size:20px;color:green"></span></td>
+					                    <%} else { %>
+					                    	<td class="text-center"><span class= "glyphicon glyphicon-remove" style="font-size:20px;color:red"></span></td>
+					                    <%}%>
+									</tr>
+								</tbody>
+							
+						<%} else {nocontent++;}%>
+					<%}%> 
+					</table>
+					<% if (nocontent == attandances.size()){ %>
+					There are no Attendance Records for this Tutorial!
+					<%}%>
+				</div>
+				<%}%>
 				<%}%>
 	</div>
 		<%

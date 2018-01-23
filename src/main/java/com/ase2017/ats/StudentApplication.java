@@ -55,7 +55,7 @@ public class StudentApplication extends Application {
         };
 
         // Defines only one route
-        router.attachDefault(AllStudent);
+        //router.attachDefault(AllStudent);
         router.attach("/test", HelloWorld);
         router.attach("/Hello/", HelloWorldResource.class);
         router.attach("/{studentId}/", SingleStudent);

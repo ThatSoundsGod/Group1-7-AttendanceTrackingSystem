@@ -11,14 +11,13 @@ import java.util.List;
 
 @Entity
 public class Tutorial {
-	@Id public Long id;
+	@Id @Index public Long id;
 	@Index public String tutorial_tutor;
 	@Index public int tutorial_number;
 	public String tutorial_time;
 	public String tutorial_roomnumber;
 	public Date tutorial_startdate;
 	public Date tutorial_stopdate;
-	public List<Student> tutorial_members = new ArrayList<Student>();
 	
 
 
