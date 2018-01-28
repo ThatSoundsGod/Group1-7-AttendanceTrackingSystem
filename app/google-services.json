@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "679634848705",
+    "project_id": "omega-post-192614"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679634848705:android:bc3e39f0c776e999",
+        "android_client_info": {
+          "package_name": "com.example.attendancetrackingsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "679634848705-41bv7qkn96spqil5999v6osm4vs0ahur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.attendancetrackingsystem",
+            "certificate_hash": "a7cd5b9953617f77f924eb84d5ce6e4af3c7fbb2"
+          }
+        },
+        {
+          "client_id": "679634848705-0qa8r9n53hqk1c7q7l9g4erv7obvlh4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOh5JaDNcFIZjbN31B9qyMBBiV-5MZOKs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

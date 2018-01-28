@@ -34,12 +34,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="06.11.2017" />
+            android:text="16.02.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="attendant" />
 
 
@@ -73,12 +74,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="27.11.2017" />
+            android:text="09.03.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="attendant" />
 
 
@@ -113,12 +115,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="29.01.1018" />
+            android:text="27.04.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="attendant" />
 
 
@@ -152,12 +155,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="22.01.2018" />
+            android:text="20.04.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="attendant" />
 
 
@@ -191,12 +195,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="15.01.2018" />
+            android:text="13.04.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="attendant" />
 
 
@@ -230,12 +235,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="08.01.2018" />
+            android:text="06.04.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="attendant" />
 
 
@@ -269,12 +275,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="18.12.2017" />
+            android:text="30.03.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="attendant" />
 
 
@@ -308,12 +315,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="11.12.2017" />
+            android:text="23.03.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="false"
             android:text="attendant" />
 
 
@@ -347,12 +355,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="04.12.2017" />
+            android:text="16.03.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="false"
             android:text="attendant" />
 
 
@@ -386,12 +395,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="20.11.2017" />
+            android:text="02.03.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="attendant" />
 
 
@@ -425,12 +435,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="30.10.2017" />
+            android:text="09.02.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="attendant" />
 
 
@@ -462,12 +473,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="23.10.2017" />
+            android:text="02.02.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="attendant" />
 
 
@@ -501,12 +513,13 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="date"
-            android:text="13.11.2017" />
+            android:text="23.02.2018" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="attendant" />
 
 
