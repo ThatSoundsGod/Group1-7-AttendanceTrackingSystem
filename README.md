@@ -1,5 +1,4 @@
 ## Group1-7-AttendanceTrackingSystem
-ASE Project from pros for pros 
 
 This is the Git repository of the Web Application for the Attandance Tracking System.
 
